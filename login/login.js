@@ -1,3 +1,5 @@
+const button = document.querySelector(".login-button");
+
 function checkData() {
   let loginEmail = document.querySelector("#email").value;
   let loginPsw = document.querySelector(".psw-input").value;
@@ -12,7 +14,8 @@ function checkData() {
     .then((res) => res.json())
     .then((userData) => {
       sessionStorage.setItem("token", userData.token);
-      console.log(sessionStorage.setItem("token", userData.token));
+
+      console.log(userData);
       fetchResource();
     })
     .catch((error) => {
@@ -22,9 +25,8 @@ function checkData() {
 
 function fetchResource() {
   const token = sessionStorage.getItem("token");
-  console.log(token);
 
-  fetch("https://dummyjson.com/auth/RESOURCE", {
+  fetch("https://dummyjson.com/auth/products", {
     method: "GET",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -34,10 +36,10 @@ function fetchResource() {
     .then((res) => res.json())
     .then((res) => {
       console.log(res);
-      window.location.href = "newpage.html"; // Redirect after fetching the resource
+      window.location.href = "newpage.html";
     })
     .catch((error) => {
-      //   console.log(error);
+      console.log(error);
     });
 }
 
