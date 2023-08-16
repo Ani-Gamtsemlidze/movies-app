@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./login.css" />
+    <link rel="icon" href="./images/Movie.png" type="images" />
+    <!-- <script defer src="auth.js"></script> -->
+    <script defer src="login.js"></script>
+    <title>Log In</title>
+  </head>
+  <body>
+    <div class="login_container">
+      <div class="movie_logo">
+        <img id="logo" src="./images/movie.png" />
+      </div>
+      <section class="login_box">
+        <div class="heading-title">
+          <h2>Login</h2>
+        </div>
+        <form class="form" action="">
+          <div class="container">
+            <label for="uname"></label>
+            <input
+              class="input"
+              id="email"
+              value=""
+              type="text"
+              placeholder="Email address"
+              name="uname"
+              autocomplete="off"
+            />
+            <label for="psw"></label>
+            <input
+              class="input psw-input"
+              type="password"
+              value=""
+              placeholder="Password"
+              name="psw"
+              autocomplete="off"
+            />
+            <button class="login-button" type="submit">
+              Login to your account
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>
