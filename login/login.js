@@ -36,6 +36,7 @@ function fetchResource() {
     .then((res) => res.json())
     .then((res) => {
       console.log(res);
+      // Redirect after fetching the resource
       window.location.href = "newpage.html";
     })
     .catch((error) => {
@@ -43,4 +44,5 @@ function fetchResource() {
     });
 }
 
+// Call checkData to initiate the login process
 checkData();
