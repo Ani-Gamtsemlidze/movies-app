@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./movies.css" />
+    <link rel="stylesheet" href="./search_bar/search_bar.css" />
+    <link rel="stylesheet" href="sorting/sort.css" />
+    <script defer src="movies.js" type="module"></script>
+    <title>Movies</title>
+  </head>
+  <body>
+    <div class="main_container">
+      <div class="search__sort">
+        <form action="">
+          <!-- <label for="sorting">Sort Results by:</label> -->
+          <select id="sorting" name="movies">
+            <option class="option" value="release ascending">
+              Release Date Ascending
+            </option>
+            <option class="option" value="release descending">
+              Release Date Descending
+            </option>
+            <option class="option" value="rating ascending">
+              Rating Ascending
+            </option>
+            <option class="option" value="rating descending">
+              Rating Descending
+            </option>
+          </select>
+        </form>
+        <div class="search_container">
+          <div class="search_bar">
+            <img id="search" src="search_bar/Shape.png" />
+          </div>
+          <input
+            id="search_input"
+            type="text"
+            placeholder="Search for movies
+        "
+          />
+        </div>
+      </div>
+
+      <section class="movies_container">
+        <div id="movies_list"></div>
+      </section>
+    </div>
+  </body>
+</html>

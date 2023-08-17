@@ -1,0 +1,25 @@
+#sorting {
+  background-color: #161d2f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 9px;
+  outline: none;
+  /* width: 208px; */
+  font-size: 18px;
+}
+
+.option {
+  appearance: none;
+  font-size: 16px;
+  background-color: #fff;
+  color: #161d2f;
+  padding: 5px;
+  outline: none;
+}
+
+.search__sort {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}

@@ -37,7 +37,7 @@ function fetchResource() {
     .then((res) => {
       console.log(res);
       // Redirect after fetching the resource
-      window.location.href = "newpage.html";
+      window.location.href = "movies_content.html";
     })
     .catch((error) => {
       console.log(error);
