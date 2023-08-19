@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./movies.css" />
     <link rel="stylesheet" href="./search_bar/search_bar.css" />
     <link rel="stylesheet" href="sorting/sort.css" />
-    <script defer src="movies.js" type="module"></script>
+    <script defer src="fetchAndRenderMovies.js" type="module"></script>
     <title>Movies</title>
   </head>
   <body>
@@ -30,7 +30,7 @@
             </option>
           </select>
         </form>
-        <div class="search_container">
+        <form class="search_container">
           <div class="search_bar">
             <img id="search" src="search_bar/Shape.png" />
           </div>
@@ -40,7 +40,7 @@
             placeholder="Search for movies
         "
           />
-        </div>
+        </form>
       </div>
 
       <section class="movies_container">
