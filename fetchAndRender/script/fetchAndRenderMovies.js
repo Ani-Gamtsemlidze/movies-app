@@ -1,4 +1,4 @@
-import filterMovies from "./search.js";
+import filterMovies from "../../search_bar/search.js";
 import moviesCard from "./moviesCard.js";
 // import detailedMovies from "./detailed.js";
 import { movies } from "./moviesCard.js";

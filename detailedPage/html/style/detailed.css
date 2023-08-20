@@ -5,23 +5,14 @@
   font-family: "Outfit";
 }
 
-@font-face {
+/* @font-face {
   font-family: "Outfit";
   src: url("./fonts/Outfit-Light.woff2") format("woff2"),
     url("./fonts/Outfit-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
-}
-
-@font-face {
-  font-family: "Outfit-medium";
-  src: url("./fonts/Outfit-Medium.woff2") format("woff2"),
-    url("./fonts/Outfit-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
+} */
 .movie_container {
   background-color: #161d2f;
   height: 100vh;
@@ -108,4 +99,10 @@ span:nth-child(1) {
 }
 .data_title a {
   color: #ffb9b9;
+}
+
+._back {
+  color: #fff;
+  display: inline-block;
+  margin: 20px 0 0 60px;
 }

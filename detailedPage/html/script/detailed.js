@@ -53,7 +53,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       </div>
       </div>
-      </section>`;
+      </section>
+      <a  class = "_back"href="movies_content.html"> Go Back </a>
+      
+      `;
 
       detailedMovie.innerHTML = html;
       console.log(result.description);
