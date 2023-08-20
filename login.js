@@ -1,5 +1,6 @@
 const button = document.querySelector(".login-button");
 
+window.location.href = "movies_content.html";
 function checkData() {
   let loginEmail = document.querySelector("#email").value;
   let loginPsw = document.querySelector(".psw-input").value;
@@ -14,7 +15,7 @@ function checkData() {
     .then((res) => res.json())
     .then((userData) => {
       sessionStorage.setItem("token", userData.token);
-      window.location.href = "https://chat.openai.com/";
+      window.location.href = "movies_content.html";
       fetchResource();
     })
     .catch((error) => {
@@ -35,7 +36,7 @@ function fetchResource() {
     .then((res) => res.json())
     .then((res) => console.log(res))
     .catch((error) => {
-      //   console.log(error);
+      console.log(error);
     });
 }
 
