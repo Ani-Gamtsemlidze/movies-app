@@ -1,6 +1,5 @@
+const token = sessionStorage.getItem("token");
 function fetchResource() {
-  const token = localStorage.getItem("token");
-
   fetch("https://dummyjson.com/auth/RESOURCE", {
     method: "GET",
     headers: {
