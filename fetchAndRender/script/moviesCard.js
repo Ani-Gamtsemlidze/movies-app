@@ -17,7 +17,7 @@ export const moviesCard = function (movie) {
               <span class="movie__genre">${movie.genre}</span>
             </div>
             <div class="star">
-              <img class="imdb_img" src="icons8-imdb-48.png"/>
+              <img class="imdb_img" src="./fetchAndRender/images/icons8-imdb-48.png"/>
               <span class="movie__rating">${movie.rating}</span>
             </div>
           </div>

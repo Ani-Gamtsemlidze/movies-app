@@ -1,9 +1,11 @@
+import fetchResource from "./auth";
+
 const button = document.querySelector(".login-button");
 
-window.location.href = "movies_content.html";
 function checkData() {
   let loginEmail = document.querySelector("#email").value;
   let loginPsw = document.querySelector(".psw-input").value;
+
   fetch("https://dummyjson.com/auth/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -14,27 +16,14 @@ function checkData() {
   })
     .then((res) => res.json())
     .then((userData) => {
-      sessionStorage.setItem("token", userData.token);
-      window.location.href = "movies_content.html";
-      fetchResource();
+      localStorage.setItem("token", userData.token);
+      console.log(userData.token);
+
+      // Fetch the protected resource first, then navigate to the new page
+      fetchResource().then(() => {
+        window.location.href = "movies_content.html";
+      });
     })
-    .catch((error) => {
-      console.log(error);
-    });
-}
-
-function fetchResource() {
-  const token = sessionStorage.getItem("token");
-
-  fetch("https://dummyjson.com/auth/RESOURCE", {
-    method: "GET",
-    headers: {
-      Authorization: `Bearer ${token}`,
-      "Content-Type": "application/json",
-    },
-  })
-    .then((res) => res.json())
-    .then((res) => console.log(res))
     .catch((error) => {
       console.log(error);
     });
