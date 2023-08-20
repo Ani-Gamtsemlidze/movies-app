@@ -1,0 +1,111 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Outfit";
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("./fonts/Outfit-Light.woff2") format("woff2"),
+    url("./fonts/Outfit-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit-medium";
+  src: url("./fonts/Outfit-Medium.woff2") format("woff2"),
+    url("./fonts/Outfit-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+.movie_container {
+  background-color: #161d2f;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detailed_container {
+  display: flex;
+  margin-left: 58px;
+  background-color: #293657;
+  height: 443px;
+  border-radius: 20px;
+}
+
+.data_info {
+  margin: 35px;
+}
+
+.data_description {
+  width: 700px;
+}
+
+.image {
+  width: 300px;
+  /* height: 475px; */
+  object-fit: contain;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+h2 {
+  color: #fff;
+}
+
+p {
+  font-size: 20px;
+  color: #fff;
+  line-height: 27px;
+}
+
+.data_genre {
+  display: flex;
+  color: #ffb9b9;
+  margin: 20px;
+}
+
+li:nth-child(2) {
+  margin-left: 40px;
+}
+
+.data_direct {
+  margin-top: 65px;
+}
+
+.director {
+  font-size: 20px;
+  padding-bottom: 5px;
+  color: #ffb9b9;
+}
+.writer {
+  font-size: 20px;
+  padding-bottom: 5px;
+  color: #ffb9b9;
+}
+
+.data_writers {
+  margin-top: 20px;
+}
+
+span {
+  font-size: 20px;
+  color: #fff;
+}
+
+span:nth-child(1) {
+  font-size: 22px;
+}
+
+.data_title {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+.data_title a {
+  color: #ffb9b9;
+}

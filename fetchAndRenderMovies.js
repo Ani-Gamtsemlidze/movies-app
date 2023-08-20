@@ -1,6 +1,6 @@
 import filterMovies from "./search.js";
 import moviesCard from "./moviesCard.js";
-import detailedMovies from "./detailed.js";
+// import detailedMovies from "./detailed.js";
 import { movies } from "./moviesCard.js";
 
 export const url = `https://imdb-top-100-movies.p.rapidapi.com/`;
@@ -85,14 +85,6 @@ const options = {
       }
     });
 
-    movies.addEventListener("click", (event) => {
-      if (event.target.classList.contains("more")) {
-        const movieId = event.target.getAttribute("data-movie-id");
-        detailedMovies(movieId);
-        console.log(movieId);
-        // Call the detailedMovies function with the movie ID
-      }
-    });
     console.log(result);
   } catch (error) {
     console.error(error);

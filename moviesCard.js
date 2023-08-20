@@ -1,10 +1,11 @@
 export const movies = document.getElementById("movies_list");
 
 export const moviesCard = function (movie) {
+  const id = movie.id;
   const html = `
         <section class="movie">
           <div class="image_box">
-          <a class="more"  href= "detailedMovies.html" data-movie-id="${movie.id}">View More</a>
+          <a class="more"  href= "detailedMovies.html?movieId=${id}">View More</a>
             <img class="movie__img" src="${movie.image}" />
           </div>
           <div class="movie__data">
