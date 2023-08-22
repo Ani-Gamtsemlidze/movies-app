@@ -98,3 +98,43 @@ span:nth-child(1) {
   display: inline-block;
   margin: 20px 0 0 60px;
 }
+
+@media only screen and (max-width: 992px) {
+  .detailed_image {
+    background-color: #ececec;
+    width: 299px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .image {
+    width: 131px;
+    /* height: 201px; */
+    object-fit: contain;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .data_info {
+    margin: 35px;
+  }
+  .data_title {
+    display: block;
+  }
+  .data_description {
+    width: 230px;
+  }
+  .data_direct {
+    display: none;
+  }
+  ._back {
+    margin: 10px 0 0 0;
+  }
+  .detailed_container {
+    display: block;
+    margin-left: 0;
+    height: unset;
+    border-radius: unset;
+    height: 544px;
+  }
+}
