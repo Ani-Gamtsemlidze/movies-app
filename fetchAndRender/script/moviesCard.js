@@ -5,7 +5,7 @@ export const moviesCard = function (movie) {
   const html = `
         <section class="movie">
           <div class="image_box">
-          <a class="more"  href= "detailedMovies.html?movieId=${id}">View More</a>
+          <a class="more" href= "detailedMovies.html?movieId=${id}">View More</a>
             <img class="movie__img" src="${movie.image}" />
           </div>
           <div class="movie__data">

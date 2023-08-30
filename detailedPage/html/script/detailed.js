@@ -24,10 +24,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  detailedMovies(); // Call the function when the DOM is loaded
+  detailedMovies();
 });
-{
-  /* <iframe width="420" height="315"
-src="${result.trailer}">
-</iframe> */
-}

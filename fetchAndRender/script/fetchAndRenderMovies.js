@@ -3,6 +3,10 @@ import moviesCard from "./moviesCard.js";
 // import detailedMovies from "./detailed.js";
 import { movies } from "./moviesCard.js";
 
+const searchForm = document.querySelector(".search_container");
+const searchField = document.getElementById("search_input");
+const sortForm = document.querySelector("#sorting");
+
 export const url = `https://imdb-top-100-movies.p.rapidapi.com/`;
 const options = {
   method: "GET",
@@ -16,28 +20,14 @@ const options = {
   try {
     const response = await fetch(url, options);
     const result = await response.json();
-    const searchForm = document.querySelector(".search_container");
-    const searchField = document.getElementById("search_input");
 
-    // Render the initial movies
     const resultMovie = result.splice(0, 20);
+
     resultMovie.forEach((movie) => {
       moviesCard(movie);
     });
 
-    searchForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-      event.stopPropagation();
-      movies.innerHTML = "";
-      const filteredMovies = filterMovies(resultMovie, searchField.value);
-      filteredMovies.forEach((movie) => {
-        moviesCard(movie);
-      });
-    });
-
-    searchField.addEventListener("input", (event) => {
-      event.preventDefault();
-      event.stopPropagation();
+    function searchMovies() {
       movies.innerHTML = "";
       const filteredMovies = filterMovies(resultMovie, searchField.value);
       if (filteredMovies.length === 0) {
@@ -48,9 +38,19 @@ const options = {
           moviesCard(movie);
         });
       }
+    }
+
+    searchForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      searchMovies();
     });
 
-    const sortForm = document.querySelector("#sorting");
+    searchField.addEventListener("input", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      searchMovies();
+    });
 
     sortForm.addEventListener("change", () => {
       const sortBy = sortForm.value;

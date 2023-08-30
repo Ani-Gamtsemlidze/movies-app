@@ -107,6 +107,8 @@ span:nth-child(1) {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
   }
   .image {
     width: 131px;
